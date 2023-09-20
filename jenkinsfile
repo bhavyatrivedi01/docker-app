@@ -12,7 +12,7 @@ node {
         stage 'Test'
             sh 'virtualenv myprojectenv -p python3.10'
             sh '. myprojectenv/bin/activate'
-            sh 'myprojectenv/bin/pip install -r requerment.txt.txt'
+            sh 'myprojectenv/bin/pip install -r requerment.txt'
           //  sh 'env/bin/python3.10 manage.py test --testrunner=blog.tests.test_runners.NoDbTestRunner'
 
         stage 'Deploy'
