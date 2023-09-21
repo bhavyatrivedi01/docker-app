@@ -1,4 +1,4 @@
-ssh ubuntu@54.81.4.126 <<EOF
+ssh root@54.81.4.126 <<EOF
   cd django
   git pull 
   source myprojectenv/bin/activate
