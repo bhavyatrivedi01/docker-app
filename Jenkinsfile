@@ -2,6 +2,8 @@
 node {
 
     try {
+        stages{
+            
         stage ('Checkout'){
             checkout scm
 
@@ -21,6 +23,7 @@ node {
         stage ('Publish results'){
             slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
         }
+    }
     }
 
     catch (err) {
