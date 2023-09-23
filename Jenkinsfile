@@ -13,7 +13,7 @@ pipeline {
     stage('Deploy to Apache2') {
       steps {
         // Deploy to Apache2
-        sh chmod 777 './deployment/deploy_prod.sh'
+        sh './deployment/deploy_prod.sh'
       }
     }
   }
