@@ -1,4 +1,4 @@
-ssh root@ec2-54-196-162-237.compute-1.amazonaws.com <<EOF
+  ssh root@ec2-54-196-162-237.compute-1.amazonaws.com 
   cd django
   git pull
   source myprojectenv/bin/activate
