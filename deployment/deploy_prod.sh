@@ -1,4 +1,4 @@
-ssh root@ec2-54-196-162-237.compute-1.amazonaws.com <<EOF
+ssh ubuntu@172.31.37.167 <<EOF
   cd django/myprojectenv
   git pull
   cd ..
