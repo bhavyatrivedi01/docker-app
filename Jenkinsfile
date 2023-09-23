@@ -7,12 +7,14 @@ pipeline {
       steps {
         // Git checkout
         git branch: 'master', url: 'https://github.com/bhavyatrivedi01/Blood-Bank-management-Python.git'   
+      } 
+    }
+
+    stage('Deploy to Apache2') {
+      steps {
+        // Deploy to Apache2
+        sh chmod 777 './deployment/deploy_prod.sh'
       }
-      steps{
-         sh 'git log HEAD^..HEAD --pretty="%h %an - %s" > GIT_CHANGES'
-         def lastChanges = readFile('GIT_CHANGES')  
-      }
-      
     }
   }
 }
