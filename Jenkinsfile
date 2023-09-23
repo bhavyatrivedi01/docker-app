@@ -6,7 +6,7 @@ pipeline {
     stage('Git Checkout') {
       steps {
         // Git checkout
-        git branch: '<branch_name>', url: '<git_repository_url>'
+        git branch: 'master', url: 'https://github.com/bhavyatrivedi01/Blood-Bank-management-Python.git'
       }
     }
   }
