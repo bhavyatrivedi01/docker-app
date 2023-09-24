@@ -2,7 +2,7 @@
   cd django
   git pull https://github.com/bhavyatrivedi01/Blood-Bank-management-Python.git master
   source myprojectenv/bin/activate
-  python3 ./manage.py migrate
+  ./manage.py migrate
   sudo service apache2 restart
   exit
 EOF
