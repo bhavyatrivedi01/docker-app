@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="form_body">
-            <h2 class="text-center font-">This is hacked</h2>
+            <h2 class="text-center font-">Blood Donor Registration</h2>
             <form action="{% url 'dregdisplay' %}" method="post">
                 {% csrf_token %}
                 {{forms.as_p}}
