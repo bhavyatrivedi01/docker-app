@@ -1,4 +1,4 @@
-  ssh ubuntu@44.212.70.111<<EOF
+  ssh ubuntu@172.31.81.171<<EOF
   cd Blood-Bank-management-Python
   git pull
   exit
