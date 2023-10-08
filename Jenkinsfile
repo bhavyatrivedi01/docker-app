@@ -13,8 +13,7 @@ pipeline {
       steps{
         sh 'chmod 777 ./deployment/deploy_prod.sh'
         sh './deployment/deploy_prod.sh'
-        sh 'sudo docker build . -t app' 
-        sh 'sudo docker images'
+        
       }
     }
     
