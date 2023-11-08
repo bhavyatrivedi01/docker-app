@@ -1,7 +1,22 @@
 version: 0.0
 os: linux
-hooks: 
-ApplicationStart:
-- location: start-process.sh
-  timeout: 300
-  runas: root
+files: 
+  - source: /
+    destination: /home/ubuntu
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  BeforeInstall:
+      - location: scripts/clean_instance.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStop:
+      - location: scripts/stop_app.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
+      - location: scripts/start_app.sh
+        timeout: 300
+        runas: ubuntu
